@@ -19118,8 +19118,8 @@ bool CSphIndex_VLN::MultiQuery ( const CSphQuery * pQuery, CSphQueryResult * pRe
 
 	CSphVector<BYTE> dFiltered;
 	const BYTE * sModifiedQuery = (BYTE *)pQuery->m_sQuery.cstr();
-	if ( m_pFieldFilter && m_pFieldFilter->Apply ( sModifiedQuery, 0, dFiltered ) )
-		sModifiedQuery = dFiltered.Begin();
+	//if ( m_pFieldFilter && m_pFieldFilter->Apply ( sModifiedQuery, 0, dFiltered ) )
+	//	sModifiedQuery = dFiltered.Begin();
 
 	// parse query
 	if ( pProfile )
