@@ -17808,16 +17808,16 @@ bool CSphIndex_VLN::MultiQuery ( const CSphQuery * pQuery, CSphQueryResult * pRe
 	CSphScopedPtr<CSphDict> tDict2 ( NULL );
 	pDict = SetupExactDict ( tDict2, pDict );
 
-	CSphVector<BYTE> dFiltered;
+//	CSphVector<BYTE> dFiltered;
 	const BYTE * sModifiedQuery = (BYTE *)pQuery->m_sQuery.cstr();
 
-	CSphScopedPtr<ISphFieldFilter> pFieldFilter ( NULL );
-	if ( m_pFieldFilter )
-	{
-		pFieldFilter = m_pFieldFilter->Clone();
-		if ( pFieldFilter->Apply ( sModifiedQuery, strlen ( (char*)sModifiedQuery ), dFiltered, true ) )
-			sModifiedQuery = dFiltered.Begin();
-	}
+//	CSphScopedPtr<ISphFieldFilter> pFieldFilter ( NULL );
+//	if ( m_pFieldFilter )
+//	{
+//		pFieldFilter = m_pFieldFilter->Clone();
+//		if ( pFieldFilter->Apply ( sModifiedQuery, strlen ( (char*)sModifiedQuery ), dFiltered, true ) )
+//			sModifiedQuery = dFiltered.Begin();
+//	}
 
 	// parse query
 	if ( pProfile )
